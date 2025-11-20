@@ -60,3 +60,15 @@
   - Given a FLOPs($C$) budget, use a bigger model($N$) or train on more tokens($D$)?
   - Compute optimal scaling laws - Chinchilla
   - TL;DR: $D^* = 20 N^*$ (e.g. 1.4B parameter model should be trained on 28B tokens)
+
+- Tokenizer
+  - [interactive tokenizer](https://tiktokenizer.vercel.app/)
+  - vocabulary size - number of possible tokens(integers)
+  - compression ratio - bytes per token
+  - character-based
+  - byte-based
+  - word-based
+  - byte-pair encoding
+    - introduced by Philip Gage in 1994 for data compression
+    - train the tokenizer on raw text to automatically determine the vocabulary
+    - common sequences of characters are represented by a single token, rare sequences are represented by many tokens
