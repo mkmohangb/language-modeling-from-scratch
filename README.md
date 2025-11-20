@@ -1,7 +1,6 @@
 ## language-modeling-from-scratch
   - Follow the stanford [course](https://stanford-cs336.github.io/spring2025/)
 
-
 ### Lecture 1
   - How to train the best model given a fixed set of resources?
   - Design decisions
@@ -12,9 +11,30 @@
       - optimizer
       - learning rate
     - systems
+      - kernels
+      - parallelism
+      - quantization
+      - activation checkpointing
+      - CPU offloading
+      - Inference
     - scaling laws
+      - Scaling sequence
+      - Model complexity
+      - Loss metric
+      - Parametric form
     - data
+      - Evaluation
+      - Curation
+      - Transformation
+      - Filtering
+      - Deduplication
+      - Mixing
     - alignment
+      - supervised fine-tuning
+      - reinforcement learning
+      - preference data
+      - synthetic data
+      - verifiers
    
 - Tokenziation
   - convert between strings and sequences of integers(tokens)
@@ -36,4 +56,7 @@
   - Regularization (e.g. dropout, weight decay)
   - Hyperparameters (number of heads, hidden dimension): grid search   
 
-  
+- Scaling laws
+  - Given a FLOPs($C$) budget, use a bigger model($N$) or train on more tokens($D$)?
+  - Compute optimal scaling laws - Chinchilla
+  - TL;DR: $D^* = 20 N^*$ (e.g. 1.4B parameter model should be trained on 28B tokens)
